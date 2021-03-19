@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-order: 1
+order: 2
 ---
 ## Chloe Mirzayi
 ### Doctoral Student in Epidemiology at CUNY School of Public Health
