@@ -22,7 +22,7 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.15.0"
 end
 
-gem "kramdown", ">= 2.3.0"
+gem "kramdown", ">= 2.3.1"
 
 gem "activesupport", ">= 4.1.11"
 
