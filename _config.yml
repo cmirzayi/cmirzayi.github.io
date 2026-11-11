@@ -10,7 +10,10 @@ baseurl: ""
 
 author:
   name: Chloe Mirzayi
-  email: cmirzayi@gmail.com
+  # Email is stored encoded (reversed, then base64) so it never appears as
+  # plain text in this repo or in the built pages. To change it, run:
+  #   python -c "import base64;print(base64.b64encode('you@example.com'[::-1].encode()).decode())"
+  email_encoded: bW9jLmxpYW1nQGl5YXpyaW1j
   github: cmirzayi
   scholar: https://scholar.google.com/citations?user=uwOIrEsAAAAJ
   pubmed: https://pubmed.ncbi.nlm.nih.gov/?term=Mirzayi+C%5BAuthor%5D&sort=date
