@@ -33,5 +33,15 @@
       <p class="muted">© {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
     </div>
   </footer>
+  <script>
+    // The address is decoded only when a person clicks, so it never sits in
+    // the page as text or as a mailto: link that scrapers can harvest.
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('.js-email');
+      if (!a) return;
+      e.preventDefault();
+      window.location.href = 'mailto:' + atob(a.dataset.e).split('').reverse().join('');
+    });
+  </script>
 </body>
 </html>
