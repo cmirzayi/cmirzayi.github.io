@@ -1,0 +1,32 @@
+---
+layout: default
+title: Home
+---
+<section class="hero">
+  <img src="{{ '/images/cm-640.jpg' | relative_url }}" alt="Portrait of Chloe Mirzayi">
+  <div>
+    <h1>Chloe Mirzayi, PhD</h1>
+    <p class="role">Investigator, <a href="https://cunyisph.org/">CUNY Institute for Implementation Science in Population Health</a></p>
+    <p>I am an epidemiologist and data scientist. My work spans microbiome epidemiology, standards for reporting microbiome research, and large national cohort studies of HIV prevention and care among sexual and gender minority people.</p>
+    <p>I led the development of the <a href="https://doi.org/10.1038/s41591-021-01552-x">STORMS checklist</a>, a consensus reporting guideline for human microbiome studies, and helped build <a href="https://bugsigdb.org/">BugSigDB</a>, a community-curated database of published microbial signatures. I also design and maintain data collection, management and curation systems for national cohorts and trials.</p>
+    <p>I received my PhD in Epidemiology from the CUNY Graduate School of Public Health &amp; Health Policy, advised by Levi Waldron.</p>
+    {% include links.html %}
+  </div>
+</section>
+
+<h2>Research interests</h2>
+<ul class="tags">
+  <li>Microbiome epidemiology</li>
+  <li>Causal inference</li>
+  <li>Reporting standards &amp; reproducibility</li>
+  <li>HIV prevention &amp; PrEP</li>
+  <li>Cohort data systems</li>
+  <li>Social media &amp; public health</li>
+</ul>
+
+<h2>Selected publications</h2>
+<ul class="pubs">
+  {% assign featured = site.data.publications | where: "featured", true %}
+  {% for pub in featured %}{% include pub.html pub=pub %}{% endfor %}
+</ul>
+<p><a href="{{ '/publications/' | relative_url }}">All publications →</a></p>

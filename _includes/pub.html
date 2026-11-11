@@ -1,0 +1,6 @@
+{% assign p = include.pub %}
+<li class="pub">
+  <span class="pub-title">{% if p.doi != "" %}<a href="https://doi.org/{{ p.doi }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</span>
+  <span class="pub-authors">{{ p.authors | replace: "Mirzayi C", "<strong>Mirzayi C</strong>" }}</span>
+  <span class="pub-venue"><em>{{ p.journal }}</em>, {{ p.year }}{% if p.pmid %} · <a href="https://pubmed.ncbi.nlm.nih.gov/{{ p.pmid }}/">PubMed</a>{% endif %}</span>
+</li>
