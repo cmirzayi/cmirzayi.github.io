@@ -1,0 +1,14 @@
+---
+layout: page
+title: Publications
+permalink: /publications/
+---
+<p class="muted">Peer-reviewed articles, newest first. See also <a href="{{ site.author.scholar }}">Google Scholar</a> and <a href="{{ site.author.pubmed }}">PubMed</a>.</p>
+
+{% assign by_year = site.data.publications | group_by: "year" %}
+{% for group in by_year %}
+<h2 class="year">{{ group.name }}</h2>
+<ul class="pubs">
+  {% for pub in group.items %}{% include pub.html pub=pub %}{% endfor %}
+</ul>
+{% endfor %}
