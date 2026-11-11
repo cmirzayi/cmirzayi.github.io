@@ -1,41 +1,40 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Chloe Mirzayi
-email: cmirzayi@gmail.com
-description:  # this means to ignore newlines until "baseurl:"
-    "Hello my name is Chloe Mirzayi. I'm a doctoral student in Epidemiology."
-baseurl: /
+tagline: Epidemiologist · Data Scientist
+description: >-
+  Chloe Mirzayi, PhD, is an epidemiologist and data scientist at the CUNY
+  Institute for Implementation Science in Population Health, working on
+  microbiome epidemiology, research reporting standards, and HIV prevention.
 url: https://chloemirzayi.com
-twitter_username: cmirzayi
-github_username:  cmirzayi
+baseurl: ""
+
+author:
+  name: Chloe Mirzayi
+  email: cmirzayi@gmail.com
+  github: cmirzayi
+  scholar: https://scholar.google.com/citations?user=uwOIrEsAAAAJ
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/?term=Mirzayi+C%5BAuthor%5D&sort=date
+  institution: https://cunyisph.org/team/chloe-mirzayi/
+
+# Top navigation (in order)
+nav:
+  - title: Home
+    url: /
+  - title: Research
+    url: /research/
+  - title: Publications
+    url: /publications/
+  - title: CV
+    url: /CV/
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-cayman
 plugins:
-  - jekyll-feed
+  - jekyll-seo-tag
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - cmirzayi.github.io.Rproj
+  - README.md
+  - vendor/
